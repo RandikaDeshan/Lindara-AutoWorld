@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/newlogo.png";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -48,46 +49,58 @@ const Navbar = () => {
             <img src={Logo} alt="" className=" w-30 h-full object-cover" />
           </div>
         </div>
-        <div className=" flex space-x-2 items-center">
-          <button
-            onClick={() => scrollToSection("home")}
-            className=" text-gray-300 font-bold py-2 px-4 cursor-pointer hover:text-red-500"
+        <div className=" flex space-x-10 items-center">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `font-bold hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-gray-300"}`
+            }
           >
             Home
-          </button>
-          <button
-            onClick={() => scrollToSection("home")}
-            className=" text-gray-300 font-bold py-2 px-4 cursor-pointer hover:text-red-500"
+          </NavLink>
+          <NavLink
+            to="/parts"
+            className={({ isActive }) =>
+              `font-bold hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-gray-300"}`
+            }
           >
             Spare Parts
-          </button>
-          <button
-            onClick={() => scrollToSection("home")}
-            className=" text-gray-300 font-bold py-2 px-4 cursor-pointer hover:text-red-500"
+          </NavLink>
+          <NavLink
+            to="/vihecle"
+            className={({ isActive }) =>
+              `font-bold hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-gray-300"}`
+            }
           >
             Find by Vehicle
-          </button>
-          <button
-            onClick={() => scrollToSection("home")}
-            className=" text-gray-300 font-bold py-2 px-4 cursor-pointer hover:text-red-500"
+          </NavLink>
+          <NavLink
+            to="/brands"
+            className={({ isActive }) =>
+              `font-bold hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-gray-300"}`
+            }
           >
             Brands
-          </button>
-          <button
-            onClick={() => scrollToSection("home")}
-            className=" text-gray-300 font-bold py-2 px-4 cursor-pointer hover:text-red-500"
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `font-bold hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-gray-300"}`
+            }
           >
             About Us
-          </button>
-          <button
-            onClick={() => scrollToSection("home")}
-            className=" text-gray-300 font-bold py-2 px-4 cursor-pointer hover:text-red-500"
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `font-bold hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-gray-300"}`
+            }
           >
             Contact
-          </button>
+          </NavLink>
         </div>
         <button className=" flex items-center space-x-2 text-white font-bold cursor-pointer bg-linear-to-r to-red-800 from-red-500 px-5 py-3 rounded-lg hover:shadow-lg shadow-blue-300/30 hover:-translate-y-px">
-          <FaWhatsapp/>
+          <FaWhatsapp />
           <p>WhatsApp Us</p>
         </button>
       </div>

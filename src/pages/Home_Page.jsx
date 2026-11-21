@@ -4,6 +4,8 @@ import Vehicles_Section from '@/sections/Vehicles_Section'
 import Featured_Parts_Section from '@/sections/Featured_Parts_Section'
 import Why_Section from '@/sections/Why_Section'
 import Steps_Section from '@/sections/Steps_Section'
+import Reviews_Section from '@/sections/Reviews_Section'
+import Popular_Parts_section from '@/sections/Popular_Parts_section'
 
 const Home_Page = () => {
   return (
@@ -22,6 +24,12 @@ const Home_Page = () => {
         </section>
         <section id='steps'>
             <Steps_Section/>
+        </section>
+        <section id='reviews'>
+            <Reviews_Section/>
+        </section>
+        <section id='popular'>
+            <Popular_Parts_section/>
         </section>
     </div>
   )
