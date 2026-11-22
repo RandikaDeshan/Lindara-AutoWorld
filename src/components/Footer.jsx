@@ -4,13 +4,15 @@ import {
   FaInstagram,
   FaPhoneAlt,
   FaTiktok,
+  FaWhatsapp,
 } from "react-icons/fa";
 import Logo from "../assets/newlogo.png";
 import { FaClock, FaLocationDot } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className=" w-full h-full px-20 py-15 bg-blue-950">
+    <div className=" w-full h-full px-10 pt-15 pb-5 bg-blue-950">
       <div className=" w-full flex justify-between space-x-10">
         <div>
           <img src={Logo} alt="" className=" w-50" />
@@ -30,13 +32,40 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className=" flex flex-col gap-2 ">
           <p className=" font-semibold text-white mb-10">Quick Links</p>
-          <p className=" text-blue-300 text-sm">Home</p>
-          <p className=" text-blue-300 text-sm mt-2">Spare Parts</p>
-          <p className=" text-blue-300 text-sm mt-2">Find by Vehicle</p>
-          <p className=" text-blue-300 text-sm mt-2">Brands</p>
-          <p className=" text-blue-300 text-sm mt-2">About Us</p>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `text-sm hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-blue-300"}`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/parts"
+            className={({ isActive }) =>
+              `text-sm hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-blue-300"}`
+            }
+          >
+            Spare Parts
+          </NavLink>
+          <NavLink
+            to="/brands"
+            className={({ isActive }) =>
+              `text-sm hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-blue-300"}`
+            }
+          >
+            Categories
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `text-sm hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-blue-300"}`
+            }
+          >
+            About Us
+          </NavLink>
         </div>
         <div>
           <p className=" font-semibold text-white mb-10">Categories</p>
@@ -63,6 +92,10 @@ const Footer = () => {
           <div className=" flex space-x-3 text-blue-300 text-sm mt-2">
             <FaClock />
             <p>Mon–Sat, 8:30–18:00</p>
+          </div>
+          <div className=" mt-5 flex space-x-3 text-white justify-center items-center w-40 text-xs py-3 bg-red-500 rounded-lg font-semibold">
+            <FaWhatsapp />
+            <p>Chat on WhatsApp</p>
           </div>
         </div>
       </div>

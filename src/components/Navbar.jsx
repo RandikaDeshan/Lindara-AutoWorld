@@ -67,20 +67,12 @@ const Navbar = () => {
             Spare Parts
           </NavLink>
           <NavLink
-            to="/vihecle"
-            className={({ isActive }) =>
-              `font-bold hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-gray-300"}`
-            }
-          >
-            Find by Vehicle
-          </NavLink>
-          <NavLink
             to="/brands"
             className={({ isActive }) =>
               `font-bold hover:text-red-500 cursor-pointer ${isActive ? "text-red-500" : "text-gray-300"}`
             }
           >
-            Brands
+            Categories
           </NavLink>
           <NavLink
             to="/about"

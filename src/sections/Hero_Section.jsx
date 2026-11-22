@@ -23,11 +23,11 @@ const Hero_Section = () => {
                 compatible parts and order easily through WhatsApp.
               </p>
               <div className=" flex items-center space-x-3 mt-7">
-                <div className=" text-white flex items-center space-x-2 rounded-lg px-5 py-3 border border-blue-800 bg-blue-600">
+                <div className=" text-white flex items-center space-x-2 rounded-lg px-5 py-3 font-semibold border border-red-800 bg-linear-to-r to-red-800 from-red-500">
                   <p>Explore Spare Parts</p>
                   <FaLongArrowAltRight />
                 </div>
-                <div className=" text-white rounded-lg px-5 py-3 border border-gray-400 bg-gray-600">
+                <div className=" text-white rounded-lg px-5 py-3 border border-gray-400 bg-gray-600 font-semibold">
                   <p>Find Parts by Vehicle</p>
                 </div>
               </div>

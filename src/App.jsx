@@ -7,11 +7,13 @@ import Parts_Page from "./pages/Parts_Page";
 import Find_By_Vehicle_Page from "./pages/Find_By_Vehicle_Page";
 import Brands_Page from "./pages/Brands_Page";
 import Contact_Page from "./pages/Contact_Page";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Layout_Page />}>
             <Route index element={<Home_Page />}></Route>
