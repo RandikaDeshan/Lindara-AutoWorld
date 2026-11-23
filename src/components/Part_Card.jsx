@@ -1,9 +1,7 @@
 import React from "react";
 import Engine from "../assets/engine-parts.webp";
-import Brake from "../assets/brake.webp";
-import Air from "../assets/filter.webp";
-import Steering from "../assets/steering.webp";
 import { FaCar, FaWhatsapp } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Part_Card = () => {
   return (
@@ -38,9 +36,11 @@ const Part_Card = () => {
         </p>
         <p className=" text-2xl font-bold mt-2">Rs. 2,500.00</p>
         <div className=" w-full flex justify-between gap-2 items-center mt-3">
-          <div className=" w-1/2 h-10 flex items-center justify-center text-sm bg-red-100 text-red-400 font-semibold rounded-lg border border-red-200">
-            <p>View Details</p>
-          </div>
+          <NavLink to="/partdetails" className="block w-1/2 h-10">
+            <div className=" w-full h-full flex items-center justify-center text-sm bg-red-100 text-red-400 font-semibold rounded-lg border border-red-200">
+              <p>View Details</p>
+            </div>
+          </NavLink>
           <div className=" w-1/2 h-10 flex items-center justify-center text-sm space-x-2 bg-red-500 text-white font-semibold rounded-lg border border-red-200">
             <FaWhatsapp />
             <p>Order</p>

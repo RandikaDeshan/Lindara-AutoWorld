@@ -1,0 +1,46 @@
+import React from "react";
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import Engine from "../assets/engine-parts.webp";
+import { useNavigate } from "react-router-dom";
+
+const Part_Details_Page = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className=" w-full h-full p-20">
+      <div className=" w-full pt-20">
+        <div
+          onClick={() => navigate(-1)}
+          className=" flex items-center space-x-2 cursor-pointer text-gray-600 text-sm"
+        >
+          <FaLongArrowAltLeft />
+          <p>Back</p>
+        </div>
+        <div className=" w-full flex space-x-10 mt-10">
+          <div className=" w-full">
+            <div className=" w-130 h-130 overflow-hidden border-4 border-red-200">
+              <img
+                src={Engine}
+                alt="product image"
+                className=" w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+          </div>
+          <div className=" w-full">
+            <div className=" p-2 bg-red-100 flex items-center justify-center w-34 rounded-full space-x-2">
+              <div className=" w-1 h-1 bg-red-500 rounded-full"></div>
+              <p className=" text-[10px] text-red-600">Available on enquiry</p>
+            </div>
+            <p className=" text-blue-600 uppercase mb-3 mt-5 text-xs font-semibold tracking-widest">
+              honda
+            </p>
+            <p className=" text-4xl font-semibold ">Honda Premium Air Filter</p>
+            <div className=" w-full h-px bg-gray-300 my-5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Part_Details_Page;
