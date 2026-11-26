@@ -36,6 +36,24 @@ const Part_Details_Page = () => {
             </p>
             <p className=" text-4xl font-semibold ">Honda Premium Air Filter</p>
             <div className=" w-full h-px bg-gray-300 my-5"></div>
+            <p className=" text-[10px] text-gray-600">Illustrative price</p>
+            <p className=" mt-1 text-2xl font-bold">Rs. 2,500.00</p>
+            <p className=" text-[10px] text-gray-600 mt-1">
+              Final price confirmed on enquiry
+            </p>
+            <p className=" text-sm text-gray-600 mt-2">
+              A quality replacement component selected for compatible vehicle
+              applications. Built for reliable everyday performance and supplied
+              with clearly listed fitment information.
+            </p>
+            <div className=" w-full flex justify-between items-center mt-10">
+              <p className=" text-sm font-semibold">Quantity</p>
+              <div className=" flex space-x-4 items-center text-sm border border-gray-500 px-2 py-1">
+                <p>+</p>
+                <p>1</p>
+                <p>-</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
